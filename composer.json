@@ -1,0 +1,32 @@
+{
+    "name": "sunnyr/company",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Masoud Seraj",
+            "email": "masoud.seraj.1991@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sunnyr\\Company\\": "src/",
+            "Sunnyr\\Company\\Database\\Factories\\": "database/factories",
+            "Sunnyr\\Company\\Database\\Seeders\\": "database/factories",
+            "Sunnyr\\Company\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-f": "vendor/bin/phpunit --filter"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sunnyr\\Company\\CompanyServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+
+    "minimum-stability": "dev"
+}

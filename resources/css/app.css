@@ -1,0 +1,38 @@
+@tailwind base;
+@layer base{
+    [type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus 
+    {
+        @apply tw-ring-0 tw-border-inherit;
+    }
+    .bg-tw-bg-organization-blue-100{
+        @apply tw-bg-organization-blue-100;
+    }
+    /* .tw-leading-none{
+        @apply tw-leading-base;
+    } */
+}
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: IRANSans;
+	src: url('../assets/fonts/IRANSansWeb/fonts/eot/IRANSansMedium.eot');
+	src: url('../assets/fonts/IRANSansWeb/fonts/eot/IRANSansMedium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */ url('../assets/fonts/IRANSansWeb/fonts/woff2/IRANSansWebMedium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/ url('../assets/fonts/IRANSansWeb/fonts/woff/IRANSansWebMedium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../assets/fonts/IRANSansWeb/fonts/ttf/IRANSansWebMedium.ttf') format('truetype');
+}
+
+@layer base {
+    html, body, div, span, p {
+      font-family: IRANSans;
+      line-height: 1.2rem !important;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+  }
+

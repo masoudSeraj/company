@@ -1,0 +1,32 @@
+<?php
+ 
+namespace Database\Seeders;
+
+use Artisan;
+use Illuminate\Database\Seeder;
+use Sunnyr\Company\Models\Resume;
+use Sunnyr\Company\Models\CompanySlider;
+use Sunnyr\Company\Models\CompanySliderType;
+use Illuminate\Database\Eloquent\Factories\Sequence;
+
+class CompanySeeder extends Seeder
+{
+    /**
+     * Run the database seeders.
+     */
+    public function run(): void
+    {
+        Artisan::call('vendor:publish', ['--tag' => 'company-images']);
+
+        CompanySlider::factory()->count(2)->has(
+            CompanySliderType::factory()->count(2)->state(
+                new Sequence(fn(Sequence $sequence) =>
+                    ['image' => 'image7.jpg', 'type' => 0],
+                    ['image' => 'image8.png', 'type' => 1],
+            )),
+        )->create();
+
+        $resume = Resume::factory()->count(5)->state(['image' => 'image9.png'])->create();
+
+    }
+}

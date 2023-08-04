@@ -1,0 +1,19 @@
+{
+  "name": "company-page",
+  "version": "1.0.0",
+  "description": "company page for sunnyrlube.com",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build && vite build --ssr"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "postcss-rtlcss": "^4.0.3",
+    "vue-client-recaptcha": "^1.1.3",
+    "ziggy-js": "^1.5.0"
+  }
+}
